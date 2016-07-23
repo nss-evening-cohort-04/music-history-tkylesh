@@ -1,7 +1,9 @@
 /************
 CSS for Music-history-assignment
 *************/
-
+body{
+	margin: 0;
+}
 
 /*styling for nav-bar*/
 nav > ul{
