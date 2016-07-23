@@ -15,3 +15,80 @@ li{
 	list-style-type: none;
 	display: inline;
 }
+
+/*slider bar styling*/
+ul.sidebar{
+	display: inline-block;
+	float: left;
+	margin: 15px 15px 15px 5px;
+	padding: 15px;
+	background-color: #4DD7FA;
+	width: 23%;
+	border: 2px solid black;
+
+}
+select{
+	width: 80%;
+}
+
+input[type="checkbox"]:hover{
+	cursor: pointer;
+
+}
+
+select{
+	cursor: pointer;
+}
+input[type="range"] {
+	cursor: pointer;
+	border-color: navy;
+	border: 2px solid blue;
+	background-color: blue;
+}
+ul.sidebar > li{
+	padding: 10px 0 15px 0;
+	margin: 100px 0 100px 0;
+}
+
+ul.sidebar > button {
+	background-color: lightgray;
+	display: block;
+	width: 75%;
+	margin:  50px auto 5px auto;
+	padding: 10px 20px 10px 20px;
+	border: 1px solid black;
+}
+ul.sidebar > button:hover{
+	cursor: pointer;
+}
+
+div.left{
+	float: left;
+}
+div.right{
+	float: right;
+}
+
+/*styling for main content section*/
+ul.maincontent{
+	margin-right: 5px;
+	margin-left: 2px;
+	padding-top: -5px;
+	padding-bottom: 28px;
+	display: inline-block;
+	background-color: #FEFAC0;
+	color: #785616;
+	width: 60%;
+	border: 2px solid black;
+}
+
+ul.maincontent > h1{
+	margin-bottom: -5px;
+}
+
+ul.maincontent li{
+	color: black;
+	margin: 0 10px 0 10px;
+}
+
+
