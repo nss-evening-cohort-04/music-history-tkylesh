@@ -161,6 +161,7 @@ div.right{
 
 /*styling for main content section*/
 ul.maincontent{
+  text-align: center;
 	margin-right: 5px;
 	margin-left: 2px;
 	padding-top: -5px;
