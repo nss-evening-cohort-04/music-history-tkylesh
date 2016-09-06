@@ -37,7 +37,9 @@ ul.sidebar > div{
 select{
 	width: 85%;
 }
-
+input[type="text"]{
+  margin: 2px;
+}
 input[type="checkbox"]:hover{
 	cursor: pointer;
 
@@ -180,6 +182,14 @@ ul.maincontent > h1{
 ul.maincontent li{
 	color: black;
 	margin: 0 10px 0 10px;
+}
+
+#addMusicForm{
+  text-align: left;
+  
+}
+#addMusicForm > label{
+  margin-right: 4px;
 }
 
 

@@ -26,7 +26,7 @@ songs[songs.length] = "aliens exist - by Blink182 on the album enema of the stat
 //string builder for text to display in main content section of index.html
 var stringbuilder = "<h3>Songs</h3><ul>"
 //element to add stringbuilder to
-var songElement = document.getElementById("songs");
+var songElement = document.getElementById("listsongs");
 
 //loop over the array and remove any words or characters that dont belong
 for (var i =0; i < songs.length; i++){
@@ -51,6 +51,35 @@ for (var i =0; i < songs.length; i++){
 	stringbuilder +="</ul>";
 	songElement.innerHTML = stringbuilder;
 
+////////////////////////////////
+//////Code for Add Music View///////////////////
+	var addView = document.getElementById('addsongs');
+	addView.innerHTML =`<div id="addMusicForm">
+	<h3>Add Song</h3><br/>
+	<label>title: <label><input type="text" id="songName"/><br/>
+	<label>artist: <label><input type="text" id="artistName"/><br/>
+	<label>album: <label><input type="text" id="albumName"/><br/><br/>
+	<button type="button">Add</button>
+	</div>`
+
+	document.getElementById('addsongs').style.display="none";
+
+
+
+
+	//function to show add music view
+	function addMusic(){
+		document.getElementById('listsongs').style.display="none";
+		document.getElementById('addsongs').style.display="inline-block";
+	}
+	//function to show list music view
+	function listMusic(){
+		document.getElementById('listsongs').style.display="inline-block";
+		document.getElementById('addsongs').style.display="none";
+	}
+// Once the user fills out the song form and clicks the add button, 
+// you should collect all values from the input fields, 
+// add the song to your array of songs, and update the song list in the DOM.
 
 
 
