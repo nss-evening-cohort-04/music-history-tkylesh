@@ -56,11 +56,18 @@ for (var i =0; i < songs.length; i++){
 	var addView = document.getElementById('addsongs');
 	addView.innerHTML =`<div id="addMusicForm">
 	<h3>Add Song</h3><br/>
-	<label>title: <label><input type="text" id="songName"/><br/>
-	<label>artist: <label><input type="text" id="artistName"/><br/>
-	<label>album: <label><input type="text" id="albumName"/><br/><br/>
-	<button type="button">Add</button>
-	</div>`
+		<div class="left">
+			<label class="lbl">title:</label> <br/>
+			<label class="lbl">artist:</label> <br/>
+			<label class="lbl">album:</label> <br/>
+		</div>  
+		<div class="right">
+			<input type="text" id="songName"/><br/>
+			<input type="text" id="artistName"/><br/>
+			<input type="text" id="albumName"/><br/><br/>
+			<button type="button">Add</button><br/>
+		</div>
+	</div>`;
 
 	document.getElementById('addsongs').style.display="none";
 
@@ -71,10 +78,12 @@ for (var i =0; i < songs.length; i++){
 	function addMusic(){
 		document.getElementById('listsongs').style.display="none";
 		document.getElementById('addsongs').style.display="inline-block";
+		document.getElementById('sidebar').style.display="none";
 	}
 	//function to show list music view
 	function listMusic(){
 		document.getElementById('listsongs').style.display="inline-block";
+		document.getElementById('sidebar').style.display="inline-block";
 		document.getElementById('addsongs').style.display="none";
 	}
 // Once the user fills out the song form and clicks the add button, 
