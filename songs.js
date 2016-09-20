@@ -28,6 +28,7 @@ var stringbuilder = "<h3>Songs</h3><ul>"
 //element to add stringbuilder to
 var songElement = document.getElementById("listsongs");
 
+function displayMusicList(){
 //loop over the array and remove any words or characters that dont belong
 for (var i =0; i < songs.length; i++){
 	//replacing all unwanted characters in the array items
@@ -50,22 +51,19 @@ for (var i =0; i < songs.length; i++){
 	//ending unorder list in stringbuilder
 	stringbuilder +="</ul>";
 	songElement.innerHTML = stringbuilder;
+};
+displayMusicList();
 
 ////////////////////////////////
 //////Code for Add Music View///////////////////
 	var addView = document.getElementById('addsongs');
 	addView.innerHTML =`<div id="addMusicForm">
 	<h3>Add Song</h3><br/>
-		<div class="left">
-			<label class="lbl">title:</label> <br/>
-			<label class="lbl">artist:</label> <br/>
-			<label class="lbl">album:</label> <br/>
-		</div>  
-		<div class="right">
-			<input type="text" id="songName"/><br/>
-			<input type="text" id="artistName"/><br/>
-			<input type="text" id="albumName"/><br/><br/>
-			<button type="button">Add</button><br/>
+		<div>
+			<label class="lbl">title:<input type="text" id="songName"/></label><br/>
+			<label class="lbl">artist:<input type="text" id="artistName"/></label><br/>
+			<label class="lbl">album:<input type="text" id="albumName"/></label><br/><br/>
+			<button type="button" id="addBtn">Add</button><br/>
 		</div>
 	</div>`;
 
@@ -89,9 +87,13 @@ for (var i =0; i < songs.length; i++){
 // Once the user fills out the song form and clicks the add button, 
 // you should collect all values from the input fields, 
 // add the song to your array of songs, and update the song list in the DOM.
+	document.getElementById('addBtn').addEventListener("click",function(){
+		var song = document.getElementById('songName').value;
+		var artist = document.getElementById('artistName').value;
+		var album = document.getElementById('albumName').value;
+		songs[songs.length] = `${song} by ${artist} off of ${album}`;
+		displayMusicList();
+		console.log(songs[(songs.length-1)]);
+	});
 
 
-
-//console.log(songs[0].includes(">"));
-//console.log(songs[0].replace(">",""));
-console.log(songs);

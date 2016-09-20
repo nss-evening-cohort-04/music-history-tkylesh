@@ -181,12 +181,7 @@ ul.maincontent > li{
 	color: black;
 	margin: 0 10px 0 10px;
 }
-div.left{
-  margin-left: 30%;
-}
-div.right{
-  margin-right: 45%;
-}
+
 div#addsongs{
   display: block;
   margin: 0 0 10px -2%;
@@ -197,10 +192,15 @@ div#addsongs{
   border: 2px solid black;
   width: 100%;
 }
-.lbl {
-}
 input[type="text"]{
   margin-bottom: 5px;
+}
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
 
 
