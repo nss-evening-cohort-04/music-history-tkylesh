@@ -26,8 +26,9 @@ songs[songs.length] = "aliens exist - by Blink182 on the album enema of the stat
 //string builder for text to display in main content section of index.html
 var stringbuilder = "<h3>Songs</h3><ul>"
 //element to add stringbuilder to
-var songElement = document.getElementById("songs");
+var songElement = document.getElementById("listsongs");
 
+function displayMusicList(){
 //loop over the array and remove any words or characters that dont belong
 for (var i =0; i < songs.length; i++){
 	//replacing all unwanted characters in the array items
@@ -50,10 +51,49 @@ for (var i =0; i < songs.length; i++){
 	//ending unorder list in stringbuilder
 	stringbuilder +="</ul>";
 	songElement.innerHTML = stringbuilder;
+};
+displayMusicList();
+
+////////////////////////////////
+//////Code for Add Music View///////////////////
+	var addView = document.getElementById('addsongs');
+	addView.innerHTML =`<div id="addMusicForm">
+	<h3>Add Song</h3><br/>
+		<div>
+			<label class="lbl">title:<input type="text" id="songName"/></label><br/>
+			<label class="lbl">artist:<input type="text" id="artistName"/></label><br/>
+			<label class="lbl">album:<input type="text" id="albumName"/></label><br/><br/>
+			<button type="button" id="addBtn">Add</button><br/>
+		</div>
+	</div>`;
+
+	document.getElementById('addsongs').style.display="none";
 
 
 
 
-//console.log(songs[0].includes(">"));
-//console.log(songs[0].replace(">",""));
-console.log(songs);
+	//function to show add music view
+	function addMusic(){
+		document.getElementById('listsongs').style.display="none";
+		document.getElementById('addsongs').style.display="inline-block";
+		document.getElementById('sidebar').style.display="none";
+	}
+	//function to show list music view
+	function listMusic(){
+		document.getElementById('listsongs').style.display="inline-block";
+		document.getElementById('sidebar').style.display="inline-block";
+		document.getElementById('addsongs').style.display="none";
+	}
+// Once the user fills out the song form and clicks the add button, 
+// you should collect all values from the input fields, 
+// add the song to your array of songs, and update the song list in the DOM.
+	document.getElementById('addBtn').addEventListener("click",function(){
+		var song = document.getElementById('songName').value;
+		var artist = document.getElementById('artistName').value;
+		var album = document.getElementById('albumName').value;
+		songs[songs.length] = `${song} by ${artist} off of ${album}`;
+		displayMusicList();
+		console.log(songs[(songs.length-1)]);
+	});
+
+

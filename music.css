@@ -20,7 +20,7 @@ li{
 }
 
 /*slider bar styling*/
-ul.sidebar{
+ul#sidebar{
 	display: inline-block;
 	float: left;
 	margin: 15px 15px 15px 5px;
@@ -30,7 +30,7 @@ ul.sidebar{
 	border: 2px solid black;
 
 }
-ul.sidebar > div{
+ul#sidebar > div{
 	padding-top: 5px;
 
 }
@@ -135,12 +135,12 @@ input[type=range]:focus::-webkit-fill-upper  {
 
 
 
-ul.sidebar > li{
+ul#sidebar > li{
 	padding: 10px 0 15px 0;
 	margin: 100px 0 100px 0;
 }
 
-ul.sidebar > button {
+ul#sidebar > button {
 	background-color: lightgray;
 	display: block;
 	width: 75%;
@@ -148,19 +148,19 @@ ul.sidebar > button {
 	padding: 10px 20px 10px 20px;
 	border: 1px solid black;
 }
-ul.sidebar > button:hover{
+ul#sidebar > button:hover{
 	cursor: pointer;
 }
 
-div.left{
+.left{
 	float: left;
 }
-div.right{
+.right{
 	float: right;
 }
 
 /*styling for main content section*/
-ul.maincontent{
+ul.maincontent > #listsongs{
   text-align: center;
 	margin-right: 5px;
 	margin-left: 2px;
@@ -177,9 +177,31 @@ ul.maincontent > h1{
 	margin-bottom: -5px;
 }
 
-ul.maincontent li{
+ul.maincontent > li{
 	color: black;
 	margin: 0 10px 0 10px;
 }
+
+div#addsongs{
+  display: block;
+  margin: 0 0 10px -2%;
+  clear: both;
+  text-align: center;
+  background-color: #FEFAC0;
+  color: #785616;
+  border: 2px solid black;
+  width: 100%;
+}
+input[type="text"]{
+  margin-bottom: 5px;
+}
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 
 

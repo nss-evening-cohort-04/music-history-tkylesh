@@ -13,14 +13,14 @@
 	<section>
 		<nav>
 		<ul>
-			<li><a href="#">View Music</a></li>
+			<li onclick="listMusic()"><a href="#">List Music</a></li>
 			|
-			<li><a href="#">Add Music</a></li>
+			<li onclick="addMusic()"><a href="#">Add Music</a></li>
 			|
 			<li><a href="#">Profile</a></li>
 		</ul>
 		</nav>
-		<ul class="sidebar">
+		<ul id="sidebar">
 			<li>Song length:</li><br/>
 			<input class="bar" type="range"  min="0" max="30" /><br/><br/>
 			<li>Artist:</li><br/>
@@ -46,7 +46,8 @@
 			</button>
 		</ul>
 		<ul class="maincontent">
-				<div id="songs"></div>
+				<div id="listsongs"></div>
+				<div id="addsongs"></div>
 		</ul>
 	</section>
 	<footer>
