@@ -1,0 +1,11 @@
+{
+	"songlist": [
+		{"artist":"Kings of Leon" ,"title":"King of the Rodeo" , "album":"Aha Shake Heartbreak"},
+		{"artist":"Pinback" ,"title":"Good To Sea" , "album":"Autumn of the Seraphs"},
+		{"artist":"Modest Mouse" ,"title":"Bankrupt on Selling" , "album":"The Lonesome Crowded West"},
+		{"artist":"Cherub" ,"title":"XOXO" , "album":"MoM & DaD"},
+		{"artist":"Pixies" ,"title":"Monkey Gone To Heaven" , "album":"Doolittle"},
+		{"artist":"Arctic Monkeys" ,"title":"When The Sun Goes Down" , "album":"Whatever People Say I Am, That's What I'm Not"},
+		{"artist":"Vampire Weekend" ,"title":"Ya Hey" , "album":"Modern Vampires of the City"}
+	]
+}
