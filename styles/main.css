@@ -1,0 +1,193 @@
+/************
+CSS for Music-history-assignment
+*************/
+body {
+  margin: 0;
+  background: lightgray;
+  padding-top: 70px; }
+
+/*styling for nav-bar*/
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+  color: black; }
+
+#custom-bootstrap-menu.navbar-default {
+  font-size: 14px;
+  background-color: #649e00;
+  border-bottom-width: 0px; }
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > li > a {
+  color: #d4d2d2;
+  background-color: #649e00; }
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > li > a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav > li > a:focus {
+  color: #fafafa;
+  background-color: #656966; }
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a,
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:focus {
+  color: #555555;
+  background-color: #e7e7e7; }
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+  border-color: #ddd; }
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+  background-color: #ddd; }
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+  background-color: #888; }
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+  background-color: #649e00; }
+
+nav > ul {
+  padding: 15px;
+  margin: 5px;
+  background-color: #FFB4B0;
+  border: 2px solid black; }
+
+li {
+  list-style-type: none;
+  display: inline; }
+
+/*slider bar styling*/
+#sidebar {
+  display: inline-block;
+  background-color: #4DD7FA;
+  border: 2px solid black; }
+
+input[type="checkbox"]:hover {
+  cursor: pointer; }
+
+select {
+  cursor: pointer; }
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 13.8px 0; }
+
+input[type=range]:focus {
+  outline: none; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101; }
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 15px;
+  width: 12px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px; }
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd; }
+
+input[type=range]::-webkit-range-track {
+  width: 100%;
+  height: 6.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101; }
+
+input[type=range]::-webkit-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 20px;
+  width: 12px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer; }
+
+input[type=range]::-webkit-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
+input[type=range]::-webkit-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; }
+
+input[type=range]::-webkit-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; }
+
+input[type=range]::-webkit-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 8px;
+  width: 5px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 10px; }
+
+input[type=range]:focus::-webkit-fill-lower {
+  background: #3071a9; }
+
+input[type=range]:focus::-webkit-fill-upper {
+  background: white; }
+
+#sidebar > button {
+  background-color: lightgray;
+  display: block;
+  width: 75%;
+  margin: 50px auto 5px auto;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid black; }
+
+#sidebar > button:hover {
+  cursor: pointer; }
+
+/*styling for main content section*/
+.maincontent > #listsongs {
+  text-align: left;
+  display: inline-block;
+  background-color: #FEFAC0;
+  color: #785616;
+  width: 60%;
+  border: 2px solid black; }
+  .maincontent > #listsongs h3 {
+    text-align: center; }
+
+#addsongs {
+  display: block;
+  clear: both;
+  text-align: center;
+  background-color: #FEFAC0;
+  color: #785616;
+  border: 2px solid black;
+  width: 100%; }
+
+input[type="text"] {
+  margin-bottom: 5px; }
+
+/*Visible or hidden*/
+.visible {
+  display: block; }
+
+.hidden {
+  display: none; }
