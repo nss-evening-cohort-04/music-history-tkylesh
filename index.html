@@ -4,57 +4,188 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
-  <link rel="stylesheet" type="text/css" href="music.css">
+  	<link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/styles/main.css"/>
 </head>
-
 <body>
 	<header>
 	</header>
+
+<div class="container-fluid">
+<!--Nav Bar Fixed Top-->
+		<div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+		    <div class="container-fluid">
+		        <div class="navbar-header"><a class="navbar-brand" href="#">Music History</a>
+		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+		            </button>
+		        </div>
+		        <div class="collapse navbar-collapse navbar-menubuilder">
+		            <ul class="nav navbar-nav navbar-left">
+		                <li id="listMusic"><a href="#">List Music</a>
+		                </li>
+		                <li id="addMusic"><a href="#">Add Music</a>
+		                </li>
+		                <li><a href="#">Profile</a>
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+<!--Nav Bar Fixed Top-->
+
+<!--Main Section - Home Page-->
 	<section>
-		<nav>
-		<ul>
-			<li id="listMusic"><a href="#">List Music</a></li>
-			|
-			<li id="addMusic"><a href="#">Add Music</a></li>
-			|
-			<li><a href="#">Profile</a></li>
-		</ul>
-		</nav>
-		<ul id="sidebar">
-			<li>Song length:</li><br/>
-			<input class="bar" type="range"  min="0" max="30" /><br/><br/>
-			<li>Artist:</li><br/>
-			<select>
-				<option>Options</option>
-			</select><br/><br/>
-			<li>Album</li><br/>
-			<select>
-				<option>Options</option>
-			</select><br/><br/>
-			<li>Genre:</li><br/>
-			<div class="left">
-			<input type="checkbox" name="genre" value="Rock"/>Rock<br/>
-			<input type="checkbox" name="genre" value="Pop"/>Pop<br/>
-			<input type="checkbox" name="genre" value="blues"/>Blues<br/>
+<!--Side Bar Form-->
+			<form id="sidebar" class="col-sm-4 pull-left">
+				<div class="row form-group">
+					<fieldset>
+						<legend>Song length:</legend>
+						<div class="col-sm-12">
+							<input class="bar" type="range"  min="0" max="30" />
+						</div>
+					</fieldset>
+				</div>
+				<div class="row form-group">
+					<fieldset>
+						<legend>Artist:</legend><br/>
+						<div class="col-sm-12">
+							<select class="custom-select">
+							  <option selected>Open this select menu</option>
+							  <option value="1">One</option>
+							  <option value="2">Two</option>
+							  <option value="3">Three</option>
+							</select>
+						</div>
+					</fieldset>	
+				</div>
+				<div class="row form-group">
+					<fieldset>
+						<legend>Album</legend><br/>
+						<div class="col-sm-12">
+							<select class="custom-select">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+							</select>
+						</div>
+					</fieldset>	
+				</div>
+				<div class="row form-group">
+					<fieldset>
+						<legend>Genre:</legend>
+							<div class="col-sm-6 pull-left">
+								<div class="row">
+									<div class="col-sm-12 pull-right">
+										<label class="custom-control custom-checkbox">
+										  <input type="checkbox" class="custom-control-input" value="Rock">
+										  <span class="custom-control-indicator"></span>
+										  <span class="custom-control-description">Rock</span>
+										</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 pull-right">
+										<label class="custom-control custom-checkbox">
+										  <input type="checkbox" class="custom-control-input" value="Pop">
+										  <span class="custom-control-indicator"></span>
+										  <span class="custom-control-description">Pop</span>
+										</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 pull-right">
+										<label class="custom-control custom-checkbox">
+										  <input type="checkbox" class="custom-control-input" value="Blues">
+										  <span class="custom-control-indicator"></span>
+										  <span class="custom-control-description">Blues</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 pull-right">
+								<div class="row">
+									<div class="col-sm-12 pull-left">
+										<label class="custom-control custom-checkbox">
+										  <input type="checkbox" class="custom-control-input" value="Classical">
+										  <span class="custom-control-indicator"></span>
+										  <span class="custom-control-description">Classical</span>
+										</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 pull-left">
+										<label class="custom-control custom-checkbox">
+										  <input type="checkbox" class="custom-control-input" value="Jazz">
+										  <span class="custom-control-indicator"></span>
+										  <span class="custom-control-description">Jazz</span>
+										</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 pull-left">
+										<label class="custom-control custom-checkbox">
+										  <input type="checkbox" class="custom-control-input" value="Hip Hop">
+										  <span class="custom-control-indicator"></span>
+										  <span class="custom-control-description">Hip Hop</span>
+										</label>
+									</div>
+								</div>
+							</div>
+					</fieldset>
+				</div>
+				<button type="submit">Filter
+				</button>
+			</form>
+<!--Side Bar Form-->
+			
+			
+			<div class="maincontent" class="col-sm-8">					
+				<div id="listsongs"></div>	
 			</div>
-			<div class="right">
-			<input type="checkbox" name="genre" value="classical"/>Classical<br/>
-			<input type="checkbox" name="genre" value="jazz"/>Jazz<br/>
-			<input type="checkbox" name="genre" value="hiphop"/>Hip hop<br/>
-			</div><br/><br/>
-			<button type="submit">Filter
-			</button>
-		</ul>
-		<ul class="maincontent">
-				<div id="listsongs"></div>
-				<div id="addsongs"></div>
-		</ul>
 	</section>
+<!--Main Section - Home Page-->
+
+<!--Add Songs Section-->
+	<section id="addSection" class="hidden">
+			<form id="addsongs" class="col-sm-4 pull-left">
+				<div class="row form-group">
+					<div class=" col-sm-12">
+						<fieldset>				
+							<legend>Add Song</legend><br/>
+								<div class="form-group row">
+								  <label for="songName" class="col-xs-2 col-form-label">SONG</label>
+								  <div class="col-xs-10">
+								    <input class="form-control" type="text" id="songName">
+								  </div>
+								</div>
+								<div class="form-group row">
+								  <label for="artistName" class="col-xs-2 col-form-label">ARTIST</label>
+								  <div class="col-xs-10">
+								    <input class="form-control" type="text" id="artistName">
+								  </div>
+								</div>
+								<div class="form-group row">
+								  <label for="albumName" class="col-xs-2 col-form-label">ALBUM</label>
+								  <div class="col-xs-10">
+								    <input class="form-control" type="text" id="albumName">
+								  </div>
+								</div>
+								<button type="button" class="btn btn-primary" id="addBtn">Add</button><br/>
+						</fieldset>
+					</div>
+				</div>
+			</form>
+	</section>
+<!--Add Songs Section-->
+</div>
 	<footer>
 		
 	</footer>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="songs.js"></script>
+<script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="javascripts/songs.js"></script>
 </body>
 </html>

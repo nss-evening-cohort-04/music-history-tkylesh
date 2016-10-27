@@ -93,9 +93,9 @@ for (var i =0; i < songs.songlist.length; i++){
 	}//end of for loop
 	//ending unorder list in stringbuilder
 	stringbuilder +="</ul><br/><br/>";
-	stringbuilder +="<button type='button' id='moreSongsBtn'>More ></button><br/><br/>";
+	stringbuilder +="<button type='button' id='moreSongsBtn' class='center-block'>More ></button><br/><br/>";
 	songElement.html(stringbuilder);
-};
+}
 
 
 
@@ -103,30 +103,19 @@ for (var i =0; i < songs.songlist.length; i++){
 
 /////////////////////////////////////////////////
 //////Code for Add Music View///////////////////
-	var addView = $('#addsongs');
-	addView.html(`<div id="addMusicForm">
-		<h3>Add Song</h3><br/>
-			<div>
-				<label class="lbl">title:<input type="text" id="songName"/></label><br/>
-				<label class="lbl">artist:<input type="text" id="artistName"/></label><br/>
-				<label class="lbl">album:<input type="text" id="albumName"/></label><br/><br/>
-				<button type="button" id="addBtn">Add</button><br/>
-			</div>
-		</div>`);
-	$('#addsongs').css("display","none");
 
 	//function to show add music view
 	let addMusic =() => {
-		$('#listsongs').css("display","none");
-		$('#addsongs').css("display","inline-block");
-		$('#sidebar').css("display","none");
+		$('#listsongs').addClass('hidden');
+		$('#sidebar').addClass('hidden');
+		$('#addSection').removeClass('hidden');
 	};
 
 	//function to show list music view
 	let listMusic =() => {
-		$('#listsongs').css("display","inline-block");
-		$('#sidebar').css("display","inline-block");
-		$('#addsongs').css("display","none");
+		$('#listsongs').removeClass('hidden');
+		$('#sidebar').removeClass('hidden');
+		$('#addSection').addClass('hidden');
 	};
 ///////////////*****************************************//////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
@@ -141,7 +130,7 @@ for (var i =0; i < songs.songlist.length; i++){
 		var album = $('#albumName').val();
 		var newSongObject= {"artist":artist,"title":title,"album":album};
 		songs.songlist.push(newSongObject);
-		alert("song has been temporarily added to the list music view");
+		console.log("song has been temporarily added to the list music view");
 		// console.log(songs.songlist[(songs.songlist.length-1)]);
 		displayMusicList(songs);
 		$('#songName').val("");

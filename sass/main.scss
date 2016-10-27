@@ -4,9 +4,48 @@ CSS for Music-history-assignment
 body{
 	margin: 0;
 	background: lightgray;
+  padding-top: 70px;
 }
 
 /*styling for nav-bar*/
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(0, 0, 0, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 14px;
+    background-color: rgba(100, 158, 0, 1);
+    border-bottom-width: 0px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(212, 210, 210, 1);
+    background-color: rgba(100, 158, 0, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(250, 250, 250, 1);
+    background-color: rgba(101, 105, 102, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(85, 85, 85, 1);
+    background-color: rgba(231, 231, 231, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #649e00;
+}
+
 nav > ul{
 	padding: 15px;
 	margin: 5px;
@@ -20,23 +59,13 @@ li{
 }
 
 /*slider bar styling*/
-ul#sidebar{
+#sidebar{
 	display: inline-block;
-	float: left;
-	margin: 15px 15px 15px 5px;
-	padding: 15px;
 	background-color: #4DD7FA;
-	width: 23%;
 	border: 2px solid black;
 
 }
-ul#sidebar > div{
-	padding-top: 5px;
 
-}
-select{
-	width: 85%;
-}
 
 input[type="checkbox"]:hover{
 	cursor: pointer;
@@ -56,7 +85,7 @@ input[type=range]:focus {
 }
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 8.4px;
+  height: 6.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   background: #3071a9;
@@ -66,20 +95,20 @@ input[type=range]::-webkit-slider-runnable-track {
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
-  height: 25px;
-  width: 16px;
+  height: 15px;
+  width: 12px;
   border-radius: 3px;
   background: #ffffff;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -14px;
+  margin-top: -5px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #367ebd;
 }
 input[type=range]::-webkit-range-track {
   width: 100%;
-  height: 8.4px;
+  height: 6.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   background: #3071a9;
@@ -89,8 +118,8 @@ input[type=range]::-webkit-range-track {
 input[type=range]::-webkit-range-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
+  height: 20px;
+  width: 12px;
   border-radius: 3px;
   background: #ffffff;
   cursor: pointer;
@@ -118,7 +147,7 @@ input[type=range]::-webkit-fill-upper {
 input[type=range]::-webkit-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
-  height: 10px;
+  height: 8px;
   width: 5px;
   border-radius: 3px;
   background: #ffffff;
@@ -132,15 +161,7 @@ input[type=range]:focus::-webkit-fill-upper  {
   background: white;
 }
 
-
-
-
-ul#sidebar > li{
-	padding: 10px 0 15px 0;
-	margin: 100px 0 100px 0;
-}
-
-ul#sidebar > button {
+#sidebar > button {
 	background-color: lightgray;
 	display: block;
 	width: 75%;
@@ -148,43 +169,29 @@ ul#sidebar > button {
 	padding: 10px 20px 10px 20px;
 	border: 1px solid black;
 }
-ul#sidebar > button:hover{
+
+#sidebar > button:hover{
 	cursor: pointer;
 }
 
-.left{
-	float: left;
-}
-.right{
-	float: right;
-}
 
 /*styling for main content section*/
-ul.maincontent > #listsongs{
-  text-align: center;
-	margin-right: 5px;
-	margin-left: 2px;
-	padding-top: -5px;
-	padding-bottom: 28px;
+.maincontent > #listsongs{
+  text-align: left;
 	display: inline-block;
 	background-color: #FEFAC0;
 	color: #785616;
 	width: 60%;
 	border: 2px solid black;
+  h3{
+    text-align: center;
+  }
 }
 
-ul.maincontent > h1{
-	margin-bottom: -5px;
-}
 
-ul.maincontent > li{
-	color: black;
-	margin: 0 10px 0 10px;
-}
 
-div#addsongs{
+#addsongs{
   display: block;
-  margin: 0 0 10px -2%;
   clear: both;
   text-align: center;
   background-color: #FEFAC0;
@@ -195,6 +202,8 @@ div#addsongs{
 input[type="text"]{
   margin-bottom: 5px;
 }
+
+/*Visible or hidden*/
 .visible {
   display: block;
 }
@@ -202,6 +211,3 @@ input[type="text"]{
 .hidden {
   display: none;
 }
-
-
-
