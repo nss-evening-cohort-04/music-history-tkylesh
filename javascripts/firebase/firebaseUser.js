@@ -5,7 +5,7 @@ var FbAPI = (function(oldFirebase){
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				method: 'GET',
-				url:`${apiKeys.databaseURL}/users.json?orderBy="uid"&equalTo="${uid}"`
+				url:`${apiKeys.databaseURL}/users.json`
 			}).then((response)=>{
 				//turn the object response into an array with this code
 				let users = [];

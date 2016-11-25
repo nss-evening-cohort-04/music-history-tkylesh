@@ -1,40 +1,68 @@
-'use strict';
-
+"use strict";
 var FbAPI = (function(oldFirebase){
-  
-  oldFirebase.registerUser = function(credentials){
+
+  oldFirebase.getTodos = function(apiKeys, uid){
     return new Promise((resolve, reject) => {
-      firebase.auth().createUserWithEmailAndPassword(credentials.email, credentials.password)
-      .then((authData) =>{
-        resolve(authData);
-      })
-      .catch((error)=>{
+      $.ajax({
+        method: 'GET',
+        url:`${apiKeys.databaseURL}/songs.json`
+      }).then((response)=>{
+        //turn the object response into an array with this code
+        let songs = [];
+        Object.keys(response).forEach(function(key){
+          response[key].id = key;
+          songs.push(response[key]);
+        });
+        resolve(songs);
+      }, (error)=>{
+        reject(error);
+      });
+    });
+  };
+  oldFirebase.addTodo = function(apiKeys, newItem){
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        method: 'POST',
+        url:`${apiKeys.databaseURL}/songs.json`,
+        data: JSON.stringify(newItem),
+        dataType: 'json'
+      }).then((response)=>{
+        console.log("response from post: ",response);
+        resolve(response);
+      }, (error)=>{
+        reject(error);
+      });
+    });
+  };
+  oldFirebase.deleteTodo = function(apiKeys, itemId){
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        method: 'DELETE',
+        url:`${apiKeys.databaseURL}/songs/${itemId}.json`,
+      }).then((response)=>{
+        console.log("response from delete: ",response);
+        resolve(response);
+      }, (error)=>{
         reject(error);
       });
     });
   };
 
-  oldFirebase.loginUser = function(credentials){
+  oldFirebase.editTodo = function(apiKeys, itemId, editedItem){
     return new Promise((resolve, reject) => {
-      firebase.auth().signInWithEmailAndPassword(credentials.email, credentials.password)
-      .then((authData) =>{
-        resolve(authData);
-      })
-      .catch((error)=>{ 
+      $.ajax({
+        method: 'PUT',
+        url:`${apiKeys.databaseURL}/songs/${itemId}.json`,
+        data: JSON.stringify(editedItem),
+        dataType: 'json'
+      }).then((response)=>{
+        console.log("response from post: ",response);
+        resolve(response);
+      }, (error)=>{
         reject(error);
       });
     });
   };
 
-  oldFirebase.credentialsCurrentUser = function(email, password){
-    return firebase.auth().currentUser;
-  };
-
-  oldFirebase.logoutUser = function(email, password){
-     firebase.auth().signOut();
-  };
-
-
-return oldFirebase;
-
+  return oldFirebase;
 })(FbAPI || {});
