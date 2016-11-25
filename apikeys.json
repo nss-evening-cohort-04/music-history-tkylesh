@@ -1,0 +1,8 @@
+// Initialize Firebase
+var config = {
+    "apiKey": "AIzaSyAFIrZqVRu4hyM6E7mvR9Teeib5nVAd8Bw",
+    "authDomain": "music-history-tkylesh.firebaseapp.com",
+    "databaseURL": "https://music-history-tkylesh.firebaseio.com",
+    "storageBucket": "music-history-tkylesh.appspot.com",
+    "messagingSenderId": "724799362945"
+};

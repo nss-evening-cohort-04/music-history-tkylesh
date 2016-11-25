@@ -1,5 +1,11 @@
 "use strict";
 
+
+let apiKeys = {};
+let uid = "";
+
+firebase.initializeApp(config);
+
 //////////////******************////////////////////////////////
 // These Variables will contain the parsed objects returned/////
 // from their respective XHR calls//////////////////////////////
