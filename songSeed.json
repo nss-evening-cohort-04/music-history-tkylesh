@@ -4,43 +4,61 @@
 		{
 			"artist":"Kings of Leon" ,
 			"title":"King of the Rodeo" , 
-			"album":"Aha Shake Heartbreak"
+			"album":"Aha Shake Heartbreak",
+			"uid": ""
 		},
 		"song1":
 		{
 			"artist":"Pinback" ,
 			"title":"Good To Sea" , 
-			"album":"Autumn of the Seraphs"
+			"album":"Autumn of the Seraphs",
+			"uid": ""
 		},
 		"song2":
 		{
 			"artist":"Modest Mouse" ,
 			"title":"Bankrupt on Selling" , 
-			"album":"The Lonesome Crowded West"
+			"album":"The Lonesome Crowded West",
+			"uid": ""
 		},
 		"song3":
 		{
 			"artist":"Cherub" ,
 			"title":"XOXO" , 
-			"album":"MoM & DaD"
+			"album":"MoM & DaD",
+			"uid": ""
 		},
 		"song4":
 		{
 			"artist":"Pixies" ,
 			"title":"Monkey Gone To Heaven" , 
-			"album":"Doolittle"
+			"album":"Doolittle",
+			"uid": ""
 		},
 		"song5":
 		{
 			"artist":"Artic Monkeys" ,
 			"title":"When The Sun Goes Down" , 
-			"album":"Whatever People Say I am, That's What I'm Not"
+			"album":"Whatever People Say I am, That's What I'm Not",
+			"uid": ""
 		},
 		"song6":
 		{
 			"artist":"Vampire Weekend" ,
 			"title":"Ya Hey" , 
-			"album":"Modern Vampires of the City"
+			"album":"Modern Vampires of the City",
+			"uid": ""
+		}
+	},
+	"users":{
+		"user1":{
+			"username": "a",
+			"uid": ""
 		},
+		"user2":{
+			"username": "b",
+			"uid": ""
+
+		}
 	}
 }
